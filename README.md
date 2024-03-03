@@ -24,9 +24,10 @@ This document provides instructions for setting up and using the Video Splitting
 3. **Move video files**
     Move your desired vieo files into the `/input` folder.
 
-## Usage
+## Usage:
 
-    The Video Splitting Tool is designed to be run from the command line, accepting parameters for the video file path, segment duration, and an optional mute flag.
+- **The Video Splitting Tool is designed to be run from the command line, accepting parameters for the video file path, segment duration, and an optional mute flag.**:
+
     ```bash
     node index.js <videoPath> <duration> [mute]
 
@@ -34,20 +35,26 @@ This document provides instructions for setting up and using the Video Splitting
 - **<duration>**: The duration of each segment in seconds. This parameter is required.
 - **[mute]**: An optional boolean flag to mute the audio in the output segments. Use true to mute audio or false to keep the audio. If omitted, the default is false.
 
-## Examples
-- **Splitting a video into 2-minute segments**:
+## Examples:
+
+- **Splitting a video into 2-minute segments**
+
     ```bash
     node splitVideo.js path/to/your/video.mp4 120
 
 - **Splitting a video into 2-minute segments and muting the audio**:
+    
+    ```bash
     node splitVideo.js path/to/your/video.mp4 120 true
 
-## Script Output
-    The script will create an output directory named after your video file in the predefined output folder (output). It will then generate the video segments in this directory, each with a duration specified by the <duration> parameter. If the output directory for the given video already exists, the script will not proceed to re-split the video, avoiding duplication of work.
+## Script Output:
 
-## Notes
-    - Before running the script, ensure that the path to the video file is correct and accessible from your script's location.
-    - The duration parameter should be specified in seconds.
-    - The mute flag is optional and should be omitted or set to false if you wish to retain the audio in the segments.
+The script will create an output directory named after your video file in the predefined output folder (output). It will then generate the video segments in this directory, each with a duration specified by the <duration> parameter. If the output directory for the given video already exists, the script will not proceed to re-split the video, avoiding duplication of work.
 
-    This tool simplifies the process of splitting videos into manageable segments for various applications, such as content creation, analysis, or distribution. By leveraging ffmpeg-static, it offers a portable and easy-to-set-up solution for video processing tasks.
+## Notes:
+
+- Before running the script, ensure that the path to the video file is correct and accessible from your script's location.
+- The duration parameter should be specified in seconds.
+- The mute flag is optional and should be omitted or set to false if you wish to retain the audio in the segments.
+
+This tool simplifies the process of splitting videos into manageable segments for various applications, such as content creation, analysis, or distribution. By leveraging ffmpeg-static, it offers a portable and easy-to-set-up solution for video processing tasks.
